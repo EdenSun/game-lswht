@@ -28,7 +28,8 @@ var game =
 	{id:"reward3", size:29, src:"images/reward3.png"},
 	{id:"reward4", size:29, src:"images/reward4.png"},
 	{id:"dhmbtn", size:29, src:"images/lq_dhm_btn.png"},
-	{id:"sharemask", size:29, src:"images/share_mask.png"}
+	{id:"sharemask", size:29, src:"images/share_mask.png"},
+	{id:"duihuanma", size:29, src:"images/duihuanma.png"}
 	
 	
 	
@@ -882,6 +883,19 @@ game.showShareMask = function(){
 	this.shareMask = shareMask;
 	
 	this.stage.addChild(this.shareMask);
+	this.stage.step();
+}
+
+game.showExchangeCodePage = function(){
+	var exchangeCodePage = new Q.Bitmap({id:"duihuanma", image:this.getImage("duihuanma")});
+    var sY = exchangeCodePage.scaleY = this.stage.height/exchangeCodePage.height;
+    var sX = exchangeCodePage.scaleX = this.stage.width/exchangeCodePage.width;
+    exchangeCodePage.x = 0;
+    exchangeCodePage.y = 0;
+	
+	this.exchangeCodePage = exchangeCodePage;
+	
+	this.stage.addChild(this.exchangeCodePage);
 	this.stage.step();
 }
 
